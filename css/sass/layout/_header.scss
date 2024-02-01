@@ -1,0 +1,59 @@
+@use "../helpers/index" as *;
+/* header */
+.header {
+  border-bottom: 1px solid $grey-color;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 1rem;
+    @media #{$min-xlarge} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .logo {
+      text-align: center;
+      h1 {
+        margin-bottom: 0.2rem;
+      }
+      @media #{$min-xlarge} {
+        text-align: initial;
+      }
+    }
+    nav {
+      @media #{$max-mobile} {
+        width: 100%;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: $red-color;
+        overflow: hidden;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+        @media #{$max-mobile} {
+          flex-direction: column;
+        }
+        li {
+          @media #{$max-mobile} {
+            width: 100%;
+          }
+          a {
+            display: block;
+            padding: 0.85rem;
+            color: #fff;
+            &:hover {
+              background-color: #eee;
+              color: $red-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

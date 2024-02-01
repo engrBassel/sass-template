@@ -1,0 +1,80 @@
+@use "../helpers/index" as *;
+/* home slider */
+.slider {
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+  text-align: center;
+  q {
+    display: block;
+    width: 75%;
+    margin: 0 auto 2rem;
+    font: {
+      size: 1.5rem;
+      style: italic;
+    }
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+  ul {
+    display: flex;
+    column-gap: 0.2rem;
+    width: fit-content;
+    margin: 1rem auto;
+    li {
+      width: 15px;
+      height: 15px;
+      background-color: #ddd;
+      cursor: pointer;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      &.active,
+      &:hover {
+        background-color: #fff;
+        border: 2px solid #333;
+      }
+    }
+  }
+}
+/* Services */
+.services {
+  padding-bottom: 2rem;
+  @media #{$max-mobile} {
+    text-align: center;
+  }
+  .services-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    .service-box {
+      .service-title {
+        margin-bottom: 0.7rem;
+        i {
+          font-size: 30px;
+          position: relative;
+          top: 4px;
+          @media #{$max-mobile} {
+            display: block;
+            margin: 0 auto 1rem;
+          }
+        }
+      }
+      .service-desc {
+        color: #777;
+        line-height: 1.4;
+        margin-bottom: 0.7rem;
+      }
+      .service-link {
+        color: $red-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../helpers/index" as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  @media #{$min-medium} {
+    width: 70%;
+  }
+}
